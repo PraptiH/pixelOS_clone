@@ -11,23 +11,30 @@
         body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            overflow: hidden;
             background-color: cornsilk;
         }
+
+        .rotateAnim{
+            animation : rotate 12s linear infinite
+        }
+
+        @keyframes rotate {
+           0%{transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="">
-        <div class="flex justify-between">
-            <img class="w-[30%] h-[20%] -translate-x-28 -translate-y-18" src="./assets/Monetp-y.e961e8c9.png" alt="">
-            <img class="w-[30%] h-[20%] translate-x-40 -translate-y-18" src="./assets/Monetp-w.15ff3937.png" alt="">
-        </div>
-        <div class="flex justify-between absolute -bottom-10">
-            <img class="w-[30%] h-[20%] -translate-x-28 translate-y-18" src="./assets/Monetp-b.4a3475b4.png" alt="">
-            <img class="w-[40%] h-[30%] translate-x-50  translate-y-20" src="./assets/Monetp-t.603e5c4b.png" alt="">
-        </div>
-        
+    <div class="relative">
+            <img class="rotateAnim absolute w-100 h-100 translate-x-[-40%] translate-y-[-30%] top-0 left-0" src="./assets/Monetp-y.e961e8c9.png" alt="">
+            <img class="rotateAnim absolute w-100 h-100  translate-x-[45%] translate-y-[-12%] top-0 right-0" src="./assets/Monetp-w.15ff3937.png" alt="">
+       
+            <img class="rotateAnim absolute w-100 h-100 translate-x-[-40%] translate-y-[100%] left-0" src="./assets/Monetp-b.4a3475b4.png" alt="">
+            <img class="rotateAnim absolute w-100 h-100  translate-x-[25%] translate-y-[100%]  right-0" src="./assets/Monetp-t.603e5c4b.png" alt=""> 
+         
     </div>
 </body>
 
