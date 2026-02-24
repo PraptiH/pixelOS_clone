@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/28bbd88697.js" crossorigin="anonymous"></script>
     <title>PIxelOS</title>
 
     <style>
@@ -26,6 +27,7 @@
             position: relative;
             display: inline-block;
         }
+
         #lineAnim::before,
         #lineAnim2::before,
         #lineAnim3::before,
@@ -39,24 +41,26 @@
             right: 0px;
             transform: scaleX(0);
             transform-origin: left;
-            transition:  0.4s ease;
+            transition: 0.4s ease;
         }
+
         #lineAnim2::before {
             width: 90px;
             left: 5px;
         }
+
         #lineAnim3::before,
         #lineAnim4::before {
             width: 50px;
             left: 1px;
         }
 
-        
+
         #lineAnim:hover::before,
         #lineAnim2:hover:before,
         #lineAnim3:hover:before,
         #lineAnim4:hover:before {
-            transform: scaleX(1); 
+            transform: scaleX(1);
         }
 
 
@@ -92,12 +96,17 @@
             <h3 class="text-2xl font-bold text-[#49473e]">PixelOS</h3>
         </div>
 
-        <div class="flex gap-10 justify-end">
+        <div class="lg:flex gap-10 justify-end hidden">
             <p id="lineAnim" class="text-[#42413b] font-medium text-xl cursor-pointer">About</p>
             <p id="lineAnim2" class="text-[#3f3e39] font-medium text-xl cursor-pointer">Download</p>
             <p id="lineAnim3" class="text-[#49473e] font-medium text-xl cursor-pointer">Team</p>
             <p id="lineAnim4" class="text-[#49473e] font-medium text-xl cursor-pointer">Blog</p>
         </div>
+
+        <!-- medium device -->
+         <div class="text-5xl translate-x-50 lg:hidden ">
+            <i class="fa-solid fa-grip-lines"></i>
+         </div>
     </div>
 
     <div class="absolute top-20 flex items-center justify-around">
